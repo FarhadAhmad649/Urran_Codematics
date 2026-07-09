@@ -23,8 +23,8 @@ body{
 }
 
 .logo{
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
 }
 
 .headings{
@@ -38,12 +38,12 @@ body{
     color: white;
 }
 .headings h1{
-    font-size: 50px;
+    font-size: 100px;
     font-weight: 1000;
 }
 
 .headings h3{
-    font-size: 23px;
+    font-size: 40px;
     font-weight: 1000;
 }
 .first-section p{
@@ -116,7 +116,7 @@ h1, h2, h3, p{
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    padding-left: 220px;
+    padding-left: 180px;
     clip-path: polygon(
     0 0,
     100% 0,
@@ -126,6 +126,6 @@ h1, h2, h3, p{
 );
 }
 .last-section p{
-    font-size: 40px;
+    font-size: 45px;
     font-weight: 1000;
 }
