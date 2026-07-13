@@ -6,7 +6,7 @@ body{
 }
 
 .first-section{
-    background-color:  #8f2424;
+    background-color:  #560808;
     padding: 30px;
     padding-bottom: 120px;
     padding-left: 120px;
@@ -47,6 +47,7 @@ body{
     font-weight: 1000;
 }
 .first-section p{
+    font-size: 27px;
     margin-bottom: 20px;
 }
 .second-section{
@@ -99,7 +100,7 @@ body{
     margin-bottom: 10px;
 }
 .first-para{
-    color: rgb(154, 23, 23);
+    color: #560808;
     font-weight: bold;
 }
 .second-para{
@@ -110,7 +111,7 @@ h1, h2, h3, p{
     margin: 0;
 }
 .last-section{
-    background-color: #8f2424;
+    background-color: #560808;
     height: 300px;
     display: flex;
     flex-direction: column;
