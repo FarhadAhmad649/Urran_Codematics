@@ -1,132 +1,133 @@
-body{
+*{
     margin: 0;
     padding: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    
+    box-sizing: border-box;
 }
 
-.first-section{
-    background-color:  #560808;
-    padding: 30px;
-    padding-bottom: 120px;
-    padding-left: 120px;
-    padding-right: 120px;
-    gap: 30px;
-    text-align: justify;
-    clip-path: polygon(
-    0 0,
-    100% 0,
-    100% 80%,
-    90% 100%,
-    0 100%
-);
+.hero-banner{
+    display: flex;
+    margin: 1px 1px 16px 2px;
+    padding: 0 94px 0 94px;
+    background-color: #8b2020;
+    height: 1050px;
+    flex-direction: column;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 82%, 90% 100%, 0 100%);
 }
 
-.logo{
-    width: 130px;
-    height: 130px;
-}
-
-.headings{
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-    margin-bottom: 30px;
-}
-
-.headings h1, p{
-    color: white;
-}
-.headings h1{
-    font-size: 100px;
-    font-weight: 1000;
-}
-
-.headings h3{
-    font-size: 40px;
-    font-weight: 1000;
-}
-.first-section p{
-    font-size: 27px;
-    margin-bottom: 20px;
-}
-.second-section{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.article{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin: 30px;
-    margin-top: 60px;
-    margin-left: 100px;
-    margin-right: 100px;
-}
-.upper-part{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-left: 45px;
-    margin-top: 20px;
-}
-.img{
-    height: 24px;
-}
-.upper-part h2{
-    font-size: 34px;
-    font-weight: 1000;
-}
-.article{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-.mid-body-section{
-    display: flex;
-    justify-content: space-around;
-    gap: 40px;
-    margin-bottom: 20px;
-}
-.div-section{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.div-section img{
-    width: 80px;
+.hero-banner-logo img{
+    margin: 80px 0 40px 40px;
+    height: 200px;
+    width: 200px;
     margin-bottom: 10px;
 }
-.first-para{
-    color: #560808;
-    font-weight: bold;
+
+.hero-banner-content h1,
+.hero-banner-content h3,
+.hero-banner-content p{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-left: 5%;
 }
-.second-para{
-    color: black;
-    font-weight: bold;
+
+.hero-banner-title{
+    margin-top: 45px;
+    color: #fff;
+    font-size: 100px;
+    font-weight: 800;
 }
-h1, h2, h3, p{
-    margin: 0;
+
+.hero-banner-subtitle{
+    margin-top: -2%;
+    margin-bottom: 20px;
+    font-size: 50px;
+    color: #000000;
 }
-.last-section{
-    background-color: #560808;
-    height: 300px;
+
+.hero-banner-text{
+    color: #fff;
+    font-size: 25px;
+    margin-right: 1%;
+    margin-bottom: 20px;
+} 
+
+
+.awards-section{
+    margin: 5% 10% 10% 10%;
+}
+
+.award-category-heading{
+    display: flex;
+}
+
+.award-category-heading img{
+    height: 50px;
+    margin-top: 105px;
+}
+
+.award-category-heading h2{
+    color: #000;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 70px;
+    font-weight: 900;
+    margin-left: 18px;
+    text-transform: uppercase;
+    margin-top: 8%;
+    margin-bottom: 5%;
+}
+
+.club-list{
+    display: flex;
+    justify-content: space-between;
+}
+
+.club-card{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: start;
-    padding-left: 180px;
+    align-items: center;
+}
+
+.club-card img{
+    margin: 10px 0 10px 0;
+    width: 120px;
+    height: 120px;
+}
+
+.club-card-name{
+    color: #8c3232;
+}
+
+.club-card-rank{
+    font-size: 20px;
+}
+
+
+.closing-banner{
+    background-color: #a02727;
+    height: 450px;
+    margin-left: 2px;
+    display: flex;
+    align-items: center;
+    position: relative;
     clip-path: polygon(
-    0 0,
-    100% 0,
-    100% 60%,
-    90% 100%,
-    0 100%
-);
+        0       0, 
+        100%    0, 
+        100%    55%, 
+        88%     100%, 
+        0       100%);
 }
-.last-section p{
-    font-size: 45px;
-    font-weight: 1000;
+
+
+.closing-banner-heading{
+    height: 100px;
+    margin-left: 10%;
+    margin-top: -5%;
+    margin-bottom: 80px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 58px;
+    color: #fff;
+    font-weight: 800;
 }
+
+
+
