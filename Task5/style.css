@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Arial;
 }
 
 /* Starting Header Section */
@@ -288,41 +288,39 @@ form textarea{
 
 /* Container  */
 .top-section2 {
-    display: flex;
-    width: 100%;
-    max-width: 1600px;
-    margin: 0 auto;
-    padding: 50px 30px;
-    align-items: stretch;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px 60px;
+    gap: 25px;
 }
 
-.left-section2,
+/* .left-section2,
 .mid-section2,
 .mid-section-right {
     flex: 1;
-    padding: 0 35px;
-}
+    padding: 0 3px;
+} */
 
-.left-section2 {
-    padding-left: 0;
-    border-right: 1px solid #ddd;
+.left-section2, .mid-section2 {
+    padding-right: 25px;
+    border-right: 1.5px solid #ddd;
 }
 
 .mid-section2 {
-    border-right: 1px solid #ddd;
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 
 /* Headings */
 .left-section2 h2,
 .mid-section2 h2,
 .mid-section-right h1 {
-    font-family: Georgia, 'Times New Roman', serif;
-    font-size: 28px;
+    font-family: serif;
+    font-size: 26px;
     font-weight: 600;
     color: #2b2b2b;
-    margin: 0 0 5px 0;
+    margin-bottom: 3px;
 }
 
 .left-section2 h2 span,
@@ -330,11 +328,12 @@ form textarea{
 .mid-section-right h1 span {
     font-weight: 700;
     color: #bd0906;
+    font-family: Georgia, 'Times New Roman', serif;
 }
 
 .left-section2 h3 {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 19px;
     font-weight: 700;
     color: #bd0906;
     margin: 0 0 15px 0;
@@ -344,12 +343,13 @@ form textarea{
 .left-section2 p,
 .mid-section2 p,
 .mid-section-right p {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    line-height: 1.5;
+    font-family: Arial;
+    font-size: 16px;
+    line-height: 1.2;
     font-weight: 600;
     color: #555;
     margin: 0;
+    letter-spacing: px;
 }
 
 /* left section */
@@ -357,7 +357,6 @@ form textarea{
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    margin-bottom: 25px;
 }
 
 .right-paras {
@@ -376,70 +375,95 @@ form textarea{
 
 /* mid section */
 .headings-mid-section2-up {
-    margin-bottom: 25px;
-    padding-bottom: 25px;
-    border-bottom: 1px solid #ddd;
-}
-
-.para-img-mid-section2-up {
     display: flex;
-    align-items: flex-start;
     justify-content: space-between;
-    margin-top: 10px;
+    align-items: center;
+    gap: 30px;
 }
 
-.mid-section2-paras-up {
-    flex: 1;
-    padding-right: 15px;
-}
-
-.mid-section2-img1-up {
-    flex-shrink: 0;
-}
-
-.mid-section2-img1-up img {
-    width: 150px;
-    height: auto;
-}
-
-.para-img-mid-section2-bottom-down {
+.mid-section-up-left{
     display: flex;
     flex-direction: column;
+    gap: 5px;
 }
 
-.mid-section2-paras-down {
-    margin-bottom: 15px;
+.mid-section-center-line{
+    width: 100%;
+    background-color: 1px solid rgb(213, 205, 205);
+    
 }
-
-/* Case Results image (gavel/book) sits beside its button row via flex on wrapper if needed */
 
 /* ===== Right Section (Certificates) ===== */
 .mid-section-right {
     display: flex;
     flex-direction: column;
+    margin-bottom: 1.5px solid ;
 }
 
 .mid-section-img-right-side {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 15px;
     margin-bottom: 20px;
-}
-
-.mid-section-img-right-side img {
-    width: 90px;
-    height: auto;
+    width: 100%;
 }
 
 .mid-section-right p {
     margin: 12px 0 20px 0;
 }
 
-.btn-design {
+.mid-section-mid-imageDev{
+    width: 160px;
+    height: auto;
+}
+
+.mid-section-btns{
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: end;
+    margin-top: 20px;
+}
+.mid-section-btns .line{
+    width: 60%;
+    height: 1px;
+    background-color: rgb(176, 166, 166);
+    /* box-shadow: 0px 1px 8px #333; */
+}
+
+.mid-section-btns .line-mid{
     width: 100%;
-    margin-top: auto;
+}
+
+.mid-section-mid-img{
+    width: 205px;
+    height: auto;
+}
+
+.mid-section-btns button{
+    width: 140px;
+    height: 30px;
+    background-color: #bd0906;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-family:sans-serif;
+    text-transform: uppercase;
+    box-shadow: 0px 1px 8px #333;
+    border: none;
+    cursor: pointer;
+    margin-left: 25px;
+    padding: 2px 4px;
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+.mid-section-btns .btn-img{
+    height: 13px;
 }
 
 .btn-design .hr {
@@ -456,7 +480,7 @@ form textarea{
     gap: 6px;
     width: 150px;
     height: 34px;
-    background: #bd0906;
+    background: #9d0e0b;
     color: #fff;
     font-family: Arial, sans-serif;
     font-size: 13px;
@@ -472,6 +496,11 @@ form textarea{
     width: 8px;
     height: auto;
 }
+.section2-bottomLine{
+    width: 100%;
+    height: 2px;
+    background-color: solid black;
+}
 
 /* Starting Section 3 */
 .top-section3{
@@ -479,6 +508,8 @@ form textarea{
     justify-content: space-around;
     margin: 40px 40px 0px 40px;
     padding: 0px 20px;
+    gap: 40px;
+    font-family:'Courier New', Courier, monospace;
 }
 
 .headings-left-section3 h2{
@@ -493,7 +524,8 @@ form textarea{
     background-color: #838383;
     width: 280px;
     height: 60px;
-    margin: 14px 0px;
+    margin: 18px 0px;
+    
 }
 
 .left-side-btns #left-btn img{
@@ -518,18 +550,25 @@ form textarea{
     padding-top: 6px;
     padding-right: 18px;
 }
-
+.btn-allignment img{
+    margin-right: 0px;
+}
 .btn-allignment{
     display: flex;
-    justify-content:center;
-    align-items: center;
+    justify-content:end;
+    align-items: end;
+    gap: 0px;
 }
 
 .left-end-menu{
     padding-top: 34px;
-    text-align: center;
+    text-align: start;
 }
-
+.left-end-menu-headings1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    
+}
 .left-end-menu-headings1 h1{
     padding-bottom: 24%;
     color: #333;
@@ -543,29 +582,28 @@ form textarea{
 .left-end-menu-headings2 h1{
     color: #d1d1d1;
     font-family: 'Roboto', sans-serif;
-}
-
-
-.mid-section3{
-    padding: 0px 26px;
+    text-align: center;
 }
 
 .mid-section3 h1{
     color: #333;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 800;
+    padding-bottom: 20px;
 }
 
 .mid-section3 p{
     color: #333;
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
+    line-height: 23px;
 }
 
 .right-section3{
-    padding: 0px 30px;
-}
-
-.right-section3 h2{
-    margin-right: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    font-family:'Times New Roman', Times, serif;
 }
 
 .right-section3 h2 span{
@@ -575,13 +613,26 @@ form textarea{
 .right-section3 p{
     color: #333;
     font-family: sans-serif;
-    font-size: 18px;
+    font-size: 17px;
     padding-bottom: 16px;
-    margin-right: 26%;
+    width: 100%;
 }
-
+.right-text1-section3{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
 .right-side-btns{
-    padding: 0px 0px 4px 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.right-side-btns .line{
+    width: 100%;
+    height: 2.5px;
+    background-color: rgb(150, 141, 141);
+    /* box-shadow: 0px 1px 8px #333; */
 }
 
 .right-side-btns button{
@@ -589,29 +640,48 @@ form textarea{
     height: 24px;
     background-color: #bd0906;
     color: white;
-    font-size: 16px;
+    font-size: 13px;
+    font-family:Arial;
     text-transform: uppercase;
-    box-shadow: 0px 1px 8px #333;
+    box-shadow:
+        0 -4px 8px rgba(0,0,0,0.3),   /* Top */
+       -4px 0 8px rgba(0,0,0,0.3),    /* Left */
+        4px 0 8px rgba(0,0,0,0.3);    /* Right */
     border: none;
     cursor: pointer;
-    margin: 0 0 20% 20%;
+    margin-left: 25px;
+    padding: 2px 4px;
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    justify-content: center;
+}
+.right-side-btns .btn-img{
+    height: 13px;
 }
 
 .right-img-section3{
-    padding: 0px 50px 50px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .right-img1-section3 img{
     padding-bottom: 20px;
-    width: 280px;
+    width: 320px;
 }
 
 .right-img2-section3 img{
-    width: 200px;
+    width: 140px;
 }
 
-.right-end-section3{
-    padding: 0px 0px 70px 0px;
+.only-line{
+    width: 100%;
+    height: 2px;
+    background-color: rgb(99, 98, 98);
+    box-shadow: 0px 1px 8px #333;
+    margin-top: 5px;
+    margin-bottom: 15px;
 }
 
 .right-text5-section3{
@@ -620,9 +690,12 @@ form textarea{
     align-items: center;
 }
 
+.right-icons-section3 img{
+    width: 36px;
+}
 .right-icons-section3{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
