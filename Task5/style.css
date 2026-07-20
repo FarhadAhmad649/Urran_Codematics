@@ -94,35 +94,38 @@
 
 /* Starting Main Section */
 .container-main .top-section1{
-    display: flex;
-    justify-content: space-evenly;
-    margin: 40px 40px;
-    gap: 15px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 20px;
+    padding: 30px;
 }
 
 .main-img1 img{
-    width: 640px;
-    height: 400px;
+    width: 100%;
+    height: 100%;
     box-shadow: 1px 1px 10px #333;
 }
 
 /* Image 2 Section */
 .main-img2{
-    position: relative;
-    width: 590px;
     box-shadow: 1px 1px 10px #333;
+    background-image: url(assets/form_bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    object-fit: cover;
+    gap: 3px;
+    box-sizing: border-box;
 }
-
-.main-img2 img{
-    width: 100%;
-    height: 404px;
-    display: block;
+.first-dev{
+    display: flex;
+    justify-content: start;
+    gap: 25px;
 }
-
 .main-img2 .text1-on-img h2{
-    position: absolute;
-    top: 0%;
-    left: 0%;
+    width: 190px;
     color: #333;
     font-size: 24px;
     /* font-weight: bold; */
@@ -131,37 +134,19 @@
     color: white;
     padding: 8px;
 }
-.btn-design{
-    width: 120px;
-    height: 50px;
-}
-.btn-design button {
-    display:flex;
-    align-items:center;
-    gap:8px;
-}
 
 .btn-design button img {
     width:8px;
     height:12px;
 }
-.btn-design-1{
-
-}
 
 .main-img2 .text2-on-img h2{
-    position: absolute;
-    top: 4%;
-    left: 38%;
     color: #333;
     font-size: 24px;
     font-family: 'Roboto', sans-serif;
 }
 
-.text3-on-img h1{
-    position: absolute;
-    top: 0%;
-    left: 53%;
+.text3-on-img{
     color: #083563;
     font-size: 44px;
     font-weight: bold;
@@ -169,33 +154,29 @@
 }
 
 .text4-on-img p{
-    position: absolute;
-    top: 19%;
-    left: 5%;
-    font-size: 20px;
+    font-size: 19px;
     font-family: 'Roboto', sans-serif;
+    padding: 0 30px;
 }
 
 .text4-on-img p em{
     font-weight: bold;
-    font-size: 22px;
+    font-size: 20px;
 }
 
 form{
-    position: absolute;
-    top: 30%;
-    left: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 20px;
     font-family: 'Roboto', sans-serif;
-    padding: 10px;
+    padding: 10px 30px;
 }
 
 form label{
-    width: 200px;
-    height: 30px;
-    margin: 10px;
+    margin: 0px;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
 }
 
@@ -219,39 +200,46 @@ form label[for="phone"]{
 
 
 form input[type="text"]{
-    width: 200px;
-    height: 30px;
+    width: 190px;
+    height: 25px;
     margin: 4px 10px;
 }
 
 form input[type="email"]{
-    width: 200px;
-    height: 30px;
+    width: 190px;
+    height: 25px;
     margin: 4px 8px;
 }
 
 form input[type="tel"]{
-    width: 200px;
-    height: 30px;
+    width: 190px;
+    height: 25px;
     margin: 4px 20px;
 }
 
-.conf-img img{
-    display: flex;
-    position: absolute;
-    top: 16%;
-    left: 62%;
+.conf-img{
     width: 200px;
     height: 60px;
-    transform: rotate(10deg);
+    transform: rotate(12deg);
+}
+.conf-img img{
+    width: 100%;
+    height: 60px;
 }
 
-form textarea{
-    margin-top: 4% !important;
-    width: 500px;
+.form-textarea{
+    width: 100%;
     height: 70px;
-    margin: 8px 0px;
-    resize: none;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.form-textarea textarea{
+    width: 85%;
+    height: 70px;
+    display: flex;
+    text-align: start;
+    padding: 5px 10px;
 }
 
 ::placeholder{
@@ -261,30 +249,41 @@ form textarea{
     font-family: 'Roboto', sans-serif;
 }
 
-.guarantee-text{
-    color: #333;
-    font-size: 16px;
-    font-style: italic;
-    font-family: 'Times New Roman', Times, serif;
-    margin-right: 70%;
-    margin-left: -4%;
-    padding-top: 8px;
+.form-last-div{
+    display: flex;
+    justify-content: start;
+    align-items: center; 
+    width: 100%;
+    padding: 10px 25px;
+    padding-bottom: 0;
+    gap: 25px;
+    margin-top: 20px;
+    font-family:'Times New Roman', Times, serif;
 }
 
-#form-btn{
-    position:absolute;
-    top: 86%;
-    left: 34%;
-    width: 330px;
-    height: 44px;
-    background-color: #bd0906;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    font-family: 'Roboto', sans-serif;
-    border: none;
-    cursor: pointer;
+.guarantee-text{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    color: rgb(114, 109, 109);
+    font-size: 14px;
 }
+.form-btn{
+    width: 300px;
+    height: 45px;
+    background-color: #970A0A;
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+    border: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.form-btn img{
+    width: 10px;
+    height: auto;
+    margin-left: 5px;
+}
+
 
 /* Container  */
 .top-section2 {
@@ -310,14 +309,15 @@ form textarea{
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 110%;
 }
 
 /* Headings */
 .left-section2 h2,
 .mid-section2 h2,
 .mid-section-right h1 {
-    font-family: serif;
-    font-size: 26px;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 24px;
     font-weight: 600;
     color: #2b2b2b;
     margin-bottom: 3px;
@@ -333,7 +333,7 @@ form textarea{
 
 .left-section2 h3 {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 19px;
+    font-size: 17px;
     font-weight: 700;
     color: #bd0906;
     margin: 0 0 15px 0;
@@ -344,7 +344,7 @@ form textarea{
 .mid-section2 p,
 .mid-section-right p {
     font-family: Arial;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.2;
     font-weight: 600;
     color: #555;
@@ -365,20 +365,26 @@ form textarea{
 
 .left-section2-img {
     flex-shrink: 0;
-    margin-left: 15px;
+    margin-left: 12px;
 }
 
 .left-section2-img img {
     width: 100px;
     height: auto;
+    margin-bottom: 20px;
 }
 
 /* mid section */
 .headings-mid-section2-up {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+    gap: 15px;
+}
+
+.mid-section-mid-line{
+    border-bottom: 1.4px solid rgb(214, 203, 203);
+    
 }
 
 .mid-section-up-left{
@@ -397,20 +403,21 @@ form textarea{
 .mid-section-right {
     display: flex;
     flex-direction: column;
-    margin-bottom: 1.5px solid ;
+    width: 90%;
+    margin-left: 10%;
 }
 
 .mid-section-img-right-side {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     gap: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     width: 100%;
 }
 
 .mid-section-right p {
-    margin: 12px 0 20px 0;
+    margin-top: 10px;
 }
 
 .mid-section-mid-imageDev{
@@ -423,17 +430,20 @@ form textarea{
     flex-direction: column;
     justify-content: center;
     align-items: end;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 .mid-section-btns .line{
     width: 60%;
-    height: 1px;
+    height: 1.2px;
     background-color: rgb(176, 166, 166);
     /* box-shadow: 0px 1px 8px #333; */
 }
 
 .mid-section-btns .line-mid{
-    width: 100%;
+    width: 90%;
+}
+.mid-section-btns .line-right{
+    width: 65%
 }
 
 .mid-section-mid-img{
@@ -498,8 +508,7 @@ form textarea{
 }
 .section2-bottomLine{
     width: 100%;
-    height: 2px;
-    background-color: solid black;
+    margin-top: 10px;
 }
 
 /* Starting Section 3 */
@@ -509,55 +518,55 @@ form textarea{
     margin: 40px 40px 0px 40px;
     padding: 0px 20px;
     gap: 40px;
-    font-family:'Courier New', Courier, monospace;
+    font-family: Georgia, 'Times New Roman', serif;
 }
 
 .headings-left-section3 h2{
     color: #333;
+    font-family: Georgia, 'Times New Roman', serif;
 }
 
 .headings-left-section3 h2 span{
     color: #8b161e;
+    font-family: Georgia, 'Times New Roman', serif;
 }
 
 .left-side-btns #left-btn{
     background-color: #838383;
     width: 280px;
-    height: 60px;
+    height: 65px;
     margin: 18px 0px;
-    
+    box-shadow: 0 8px 7px -3px rgba(0, 0, 0, 0.4);
 }
 
 .left-side-btns #left-btn img{
     padding-right: 3%;
     float: left;
     width: 20px;
-    height: 60px;
+    height: 100%;
 }
 
 .left-side-btns #left-btn h1{
     color: white;
     font-size: 24px;
     font-family: 'Roboto', sans-serif;
-    padding-top: 6px;
+    padding-top: 7px;
 }
+
 
 .left-side-btns #left-btn p{
     color: white;
-    font-size: 12px;
+    font-size: 13px;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     padding-top: 6px;
-    padding-right: 18px;
 }
-.btn-allignment img{
-    margin-right: 0px;
-}
+
 .btn-allignment{
     display: flex;
-    justify-content:end;
+    justify-content: end;
     align-items: end;
-    gap: 0px;
+    gap: 6px;
 }
 
 .left-end-menu{
@@ -565,12 +574,13 @@ form textarea{
     text-align: start;
 }
 .left-end-menu-headings1{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 13px;
     
 }
 .left-end-menu-headings1 h1{
     padding-bottom: 24%;
+    font-family:'Times New Roman', Times, serif;
     color: #333;
 }
 
